@@ -1,0 +1,57 @@
+#application{
+     font-family:Segoe UI, Arial, sans-serif;
+    margin: 0px;
+    padding: 0px;
+    background-color:  lightgray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.container{
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 25px;
+    box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.15);
+    box-sizing: border-box;}
+.container h3{
+    padding: 8px;
+    font-weight: bold;
+    color: rgb(5, 5, 90);
+}
+.container p{
+    color: rgb(5, 5, 90);
+    font-weight: bold;
+}
+
+#applicationForm{
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+    text-align: center;
+    align-content: center;
+    max-width: 300px;
+    padding: 30px;
+    border: 2px solid lightgray;
+    border-radius: 30px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#submit{
+    padding: 10px;
+    margin: 10px;
+    background-color: blue;
+    color: #ffffff;
+}
+#main{
+    height: 400px;
+    width: 400px;
+    padding: 20px;
+    margin: 20px;
+}
+#navbar{
+    
+    display: flex;
+    flex-direction: column;
+}

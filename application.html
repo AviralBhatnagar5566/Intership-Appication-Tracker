@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application submission</title>
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body id="application">
+    <div class="container">
+        <h3>Application Submission Page</h3>
+        <p>Fill out the details below to add a new job or internship to your tracker.</p>
+        <form id="applicationForm">
+            <label for="name">Company Name</label>
+            <input type="text"  id="CompanyName" placeholder="Enter Company Name">
+            
+            <label for="RolePosition">Role/Position</label>
+            <input type="text" id="roleposition" placeholder="Enter your Role or Position">
+            
+            <label for="date">Application Date</label>
+            <input type="date" id="date" >
+            
+            <label for="status">Status</label>
+            <select  id="status">
+                <option value="applied">Applied</option>
+                <option value="interview">Interview</option>
+                <option value="selected">Selected</option>
+                <option value="rejected">Rejected</option>
+                <option value="pending">pending</option>
+            </select>
+            
+            <label for="applicationlink">Application Link</label>
+            <input type="url" id="applicationlink">
+            
+            <label for="notes">Notes</label>
+            <textarea  id="notes"></textarea>
+            
+            <input type="submit" id="submit">
+            <p id="sucessMsg" style="color: green;"></p>
+        </form>
+    </div>
+
+</body>
+</html>
