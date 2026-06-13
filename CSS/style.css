@@ -75,14 +75,132 @@
     background-color: #E7DDD1;
     color: black;
 }
-#main{
-    height: 400px;
-    width: 400px;
-    padding: 20px;
-    margin: 20px;
+
+
+
+body{
+    background-image: url("../image/HomepagBG.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    font-family:Segoe UI, Arial, sans-serif;
+    margin: 0px;
+    padding: 0px;
+    background-color: rgb(195, 216, 221);
 }
 #navbar{
+    border: 2px solid black;
+    padding: 20px;
+    margin: 0px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: center;
+    background-color: rgb(10, 11, 35);
     
+}
+#navbar ul{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    justify-content:flex-end;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+#navbar li{
+    padding: 20px;
+    font-size: large;
+    font-weight: bold;
+    
+    
+    padding-left: 20px;
+   
+}
+#navbar li a{
+    color: rgba(230, 221, 221, 0.925);
+    text-decoration: none;
+}
+
+#main{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    padding: 20px;
+}
+#mainText{
+   padding: 20px;
+   color: rgba(11, 11, 47, 0.957);
+}
+#tracker{
+    color: blue;
+}
+#buttonone{
+    padding: 20px;
+    margin: 0px;
+    background-color: blue;
+    color: white;
+    border: 2px solid;
+    border-radius: 20px;
+    font-weight: bold;
+    
+}
+#buttonTwo{
+    padding: 20px;
+    margin: 0px;
+    background-color: transparent;
+    border: 2px solid blue;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+#dashboardPreview{
+    border: 3px solid rgb(149, 116, 181);
+    border-radius: 20px;
     display: flex;
     flex-direction: column;
+    color: white;
+
+    background-image: url("../image/dashboardBG.png");
+     background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    width: 350px;
+    height: 350px;
+    padding-left: 20px;
+    box-shadow:  0 6px 15px rgba(0,0,0,0.2);
+}
+#workflow{
+    padding: 20px;
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#workflow h2{
+   color:rgba(11, 11, 47, 0.957)
+    
+}
+#steps{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+#step1{
+    padding: 10px;
+    border: 2px solid transparent;
+    border-radius: 50px;
+}
+#step2{
+     padding: 10px;
+    border: 2px solid transparent;
+    border-radius: 50px;
+}
+#step3{
+     padding: 10px;
+    border: 2px solid transparent;
+    border-radius: 50px;
 }
