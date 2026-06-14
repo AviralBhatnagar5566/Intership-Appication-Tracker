@@ -171,35 +171,55 @@ body{
 
 #dashboardPreview{
     border: 3px solid rgb(149, 116, 181);
+    border-color: #0B1026;
     border-radius: 20px;
     display: flex;
     flex-direction: column;
-    background-color: rgb(2, 2, 88);
-    color: white;
-
+    background-color: #0B1026;
+    color: #F8FAFC;
+   
     /* background-image: url("../image/dashboardBG.png"); */
      /* background-size: cover;
     background-position: center;
     background-repeat: no-repeat; */
 
-    width: 350px;
+    min-width: 350px;
     min-height: 350px;
     padding: 20px;
-    box-shadow:  0 6px 15px rgba(0, 0, 0, 0);
+    box-shadow:  0 6px 15px rgba(0, 0, 0, 0.25);
+    transition: transform 0.3s ease, box-shadow 0.3s ease
+}
+#dashboardPreview:hover {
+    transform: translateY(-8px);
+    box-shadow: 0px 20px 40px rgba(0, 70, 255, 0.15); /* Soft blue tech glow shadow */
 }
 .applicationrows{
     display: flex;
+    flex-direction: column;
+    column-gap: 20px;
+    background-color: #16213E;
+   
+    padding: 5px;
     
-    background-color: rgba(2, 2, 90, 0);
-    justify-content: space-between;
-    padding: 15px;
-    margin: 5px;
     border-radius: 15px;
 }
 .applicationrow{
-    
     display:flex;
     justify-content:space-between;
+    background-color:  rgba(11, 11, 86, 0);
+    padding: 2px;
+    border-radius: 15px;
+
+}
+#statsRows{
+    display: flex;
+    flex-direction: row;
+    background-color: #16213E;
+    border-radius: 12px;
+}
+.statBox{
+    padding: 5px;
+    text-align: center;
 }
 #workflow{
     padding: 20px;
