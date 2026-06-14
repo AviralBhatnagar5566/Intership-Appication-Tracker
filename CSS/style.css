@@ -145,7 +145,14 @@ body{
     border: 2px solid;
     border-radius: 20px;
     font-weight: bold;
+    transition: all 0.3s ease;
     
+}
+#buttonone:hover{
+    transform: translateY(-3px);
+    background-color: darkblue;
+    box-shadow: 5px 5px 5px black;
+    border-color: purple;
 }
 #buttonTwo{
     padding: 20px;
@@ -154,6 +161,12 @@ body{
     border: 2px solid blue;
     border-radius: 20px;
     font-weight: bold;
+    transition: all 0.3s ease;
+}
+#buttonTwo:hover{
+    transform: translateY(-3px);
+    background-color: blue;
+    color: white;
 }
 
 #dashboardPreview{
@@ -161,17 +174,32 @@ body{
     border-radius: 20px;
     display: flex;
     flex-direction: column;
+    background-color: rgb(2, 2, 88);
     color: white;
 
-    background-image: url("../image/dashboardBG.png");
-     background-size: cover;
+    /* background-image: url("../image/dashboardBG.png"); */
+     /* background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat; */
 
     width: 350px;
-    height: 350px;
-    padding-left: 20px;
-    box-shadow:  0 6px 15px rgba(0,0,0,0.2);
+    min-height: 350px;
+    padding: 20px;
+    box-shadow:  0 6px 15px rgba(0, 0, 0, 0);
+}
+.applicationrows{
+    display: flex;
+    
+    background-color: rgba(2, 2, 90, 0);
+    justify-content: space-between;
+    padding: 15px;
+    margin: 5px;
+    border-radius: 15px;
+}
+.applicationrow{
+    
+    display:flex;
+    justify-content:space-between;
 }
 #workflow{
     padding: 20px;
@@ -188,19 +216,48 @@ body{
     display: flex;
     flex-direction: row;
     gap: 20px;
+    
 }
+
 #step1{
     padding: 10px;
     border: 2px solid transparent;
     border-radius: 50px;
+    background-color: white;
+    box-shadow: 3px 3px 3px black;
+    transition: all 0.4s ease-in-out 0s 
+}
+#step1:hover{
+    transform: translateY(-10px);
+    box-shadow: 10px 10px 10px rgb(28, 28, 28);;
+    border-color: purple;
 }
 #step2{
-     padding: 10px;
+    padding: 10px;
     border: 2px solid transparent;
     border-radius: 50px;
+    background-color: white;
+    box-shadow:3px 3px 3px black;
+    transition: all 0.4s ease-in-out 0s 
 }
+#step2:hover{
+    transform: translateY(-10px);
+    box-shadow: 10px 10px 10px rgb(28, 28, 28);;
+    border-color: purple;
+}
+
 #step3{
-     padding: 10px;
+    padding: 10px;
     border: 2px solid transparent;
     border-radius: 50px;
+    background-color: white;
+    box-shadow: 3px 3px 3px black;
+     transition: all 0.4s ease-in-out 0s 
+
+}
+
+#step3:hover{
+    transform: translateY(-10px);
+    box-shadow: 10px 10px 10px rgb(28, 28, 28);;
+    border-color: purple;
 }
