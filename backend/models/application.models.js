@@ -3,11 +3,13 @@ import mongoose from "mongoose";
 const applicationSchema = new mongoose.Schema({
     CompanyName:{
         type:String,
-        required:true
+        required:true,
+        trim: true
     },
     roleposition:{
         type:String,
-        required:true
+        required:true,
+        trim: true
     },
     date:{
         type:String,
@@ -19,12 +21,13 @@ const applicationSchema = new mongoose.Schema({
         required:true
     },
     applicationlink:{
-        type:URL,
+        type:String
     },
     notes:{
-        type:String
+        type:String,
+        trim: true
     }
 
 },{timestamps:true})
 
-export const application = mongoose.model("application",applicationSchema)
+export const Application = mongoose.model("application",applicationSchema)
