@@ -5,11 +5,12 @@ import { Application } from "../models/application.models.js";
 
 
 const applicationform = asyncHandler(async (req,res,next) =>{ 
+    console.log("Application controller hit");
     const{CompanyName,roleposition,date,status,applicationlink,notes} = req.body
     if(!CompanyName||!CompanyName.trim()){
         throw new APIerror(401,"Name required")
     }
-    if(!roleposition||!CompanyName.trim()){
+    if(!roleposition||!roleposition.trim()){
         throw new APIerror(401,"Roleandposition required")
     }
     if(!date){
@@ -27,7 +28,7 @@ const applicationform = asyncHandler(async (req,res,next) =>{
     applicationlink,
     notes
 })
-const createdApplication = await Application.findById(user._id)
+const createdApplication = await Application.findById(application._id)
      if(!createdApplication){
         throw new APIerror(500,"Something Went Wrong")
     }
