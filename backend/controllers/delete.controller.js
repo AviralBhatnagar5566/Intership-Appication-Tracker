@@ -1,14 +1,14 @@
-import { asyncHandler } from "../utils/asyncHandler";
-import { APIerror } from "../utils/APIerror";
-import { connectData } from "../DB/index.db";
-import { Application } from "../models/application.models";
-import { APIresponse } from "../utils/APIresponse";
+import { asyncHandler } from "../utils/asyncHandler.js";
+import { APIerror } from "../utils/APIerror.js";
+import { connectData } from "../DB/index.db.js";
+import { Application } from "../models/application.models.js";
+import { APIresponse } from "../utils/APIresponse.js";
 
 
 const deleteApplication = asyncHandler(async(req,res,next) =>{
-    const { id } = req.body
+    const { id } = req.params
 
-    const deleteApplication = await  Application.findByIdAndDelete()
+    const applicationDelete = await  Application.findByIdAndDelete(id)
 
     if(!deleteApplication){
         throw new APIerror(404,"Data not found")
