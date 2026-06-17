@@ -13,12 +13,17 @@
         <form id="applicationForm">
             <label for="Companyname" style="font-weight: bold;">Company Name</label>
             <input type="text"  id="CompanyName" placeholder="Enter Company Name" >
+            <span class="error" id="CompanyNameerror"></span>
             
             <label for="RolePosition" style="font-weight: bold;">Role/Position</label>
             <input type="text" id="roleposition" placeholder="Enter your Role or Position">
+            <span class="error" id="rolepositionerror"></span>
+
             
             <label for="date" style="font-weight: bold;">Application Date</label>
             <input type="date" id="date" >
+            <span class="error" id="dateerror"></span>
+
             
             <label for="status" style="font-weight: bold;">Status</label>
             <select  id="status">
@@ -28,12 +33,18 @@
                 <option value="Rejected">Rejected</option>
                 <option value="Pending">Pending</option>
             </select>
+            <span class="error" id="statuserror"></span>
+
             
-            <label for="applicationlink" style="font-weight: bold;">Application Link</label>
-            <input type="url" id="applicationlink">
+            <label for="applicationlink" style="font-weight: bold;" >Application Link (Optional)</label>
+            <input type="url" id="applicationlink"  placeholder="e.g., https://linkedin.com/...">
+            <span class="error" id="applicationlinkerror"></span>
+
             
-            <label for="notes" style="font-weight: bold;">Notes</label>
-            <textarea  id="notes"></textarea>
+            <label for="notes" style="font-weight: bold;">Notes (Optional)</label>
+            <textarea  id="notes" placeholder="Any extra details..."></textarea>
+            <span class="error" id="notes"></span>
+
             
             <input type="submit" id="submit">
             <p id="sucessMsg" style="color: green;"></p>
