@@ -13,4 +13,15 @@ const applications = asyncHandler(async(req,res,next) =>{
 })
 
 
-export { applications }
+const applicationsByuid = asyncHandler(async(req,res,next) =>{
+    const { id } = req.params
+    const application = await Application.findById(id)
+    
+    if(!application){
+        throw new APIerror(404,"Application id not found")
+    }
+    return res.status(200).json(
+        new APIresponse(200,"Application id found")
+    )
+})
+export { applications, applicationsByuid }

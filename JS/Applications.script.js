@@ -14,7 +14,7 @@ const response = async function response() {
         div.innerHTML = `
             <h3>CompanyName: ${Applications.CompanyName}</h3>
             <p>roleposition: ${Applications.roleposition}</p>
-            <p>Date: ${Applications.date}</p>
+            <>Date: ${Applications.date}</
             <p>Status: ${Applications.status}</p>
             <P>applicationLink: ${Applications.applicationlink}</p>
             <p>notes:${Applications.notes}</P>
@@ -23,7 +23,6 @@ const response = async function response() {
         ApplicationsList.appendChild(div)
     })
 }
-
 
 
 response()
