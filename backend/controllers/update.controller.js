@@ -1,7 +1,7 @@
-import { asyncHandler } from "../utils/asyncHandler";
-import { APIerror } from "../utils/APIerror";
-import { APIresponse } from "../utils/APIresponse";
-import { Application } from "../models/application.models";
+import { asyncHandler } from "../utils/asyncHandler.js";
+import { APIerror } from "../utils/APIerror.js";
+import { APIresponse } from "../utils/APIresponse.js";
+import { Application } from "../models/application.models.js";
 
 
 const updateApplication = asyncHandler(async(req,res,next) =>{
@@ -16,7 +16,7 @@ const updateApplication = asyncHandler(async(req,res,next) =>{
     throw new APIerror(404,"Application not found")
     }
     return res.status(202).json(
-        new APIresponse(202,"Data is updated")
+        new APIresponse(202,application,"Data is updated")
 )
 })
 

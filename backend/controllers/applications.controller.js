@@ -21,7 +21,7 @@ const applicationsByuid = asyncHandler(async(req,res,next) =>{
         throw new APIerror(404,"Application id not found")
     }
     return res.status(200).json(
-        new APIresponse(200,"Application id found")
+        new APIresponse(200,application,"Application id found")
     )
 })
 export { applications, applicationsByuid }
