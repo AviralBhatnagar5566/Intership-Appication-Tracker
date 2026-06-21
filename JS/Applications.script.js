@@ -34,7 +34,7 @@ const response = async function response() {
         editButton.innerText = "Edit"
 
         editButton.addEventListener("click",async () =>{
-            window.location.href = `update.html?id=${Applications._id}`
+            window.location.href = `updateApplication.html?id=${Applications._id}`
         })
 
          div.appendChild(button);
