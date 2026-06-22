@@ -77,6 +77,7 @@ applicationForm.addEventListener("submit",async function (event) {
             if(success){
                 document.getElementById("successMsg").innerText ="✅ Application submitted successfully!"
                 applicationForm.reset()
+                window.location.href = "applications.html"
             }
         else{
                 document.getElementById("successMsg").innerText ="❌ SomeThing Went Wrong"

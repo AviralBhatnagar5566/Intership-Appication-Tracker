@@ -9,14 +9,14 @@ const response = async function response() {
     const ApplicationsList = document.getElementById("ApplicationsList")
     data.data.forEach((Applications) => {
         const div = document.createElement("div");
-        div.classList.add("ApplicationsList")
+        div.classList.add("ApplicationsLists")
         div.innerHTML = `
-            <h3>CompanyName: ${Applications.CompanyName}</h3>
-            <p>roleposition: ${Applications.roleposition}</p>
-            <P>Date: ${Applications.date}</P>
-            <p>Status: ${Applications.status}</p>
-            <P>applicationLink: ${Applications.applicationlink}</p>
-            <p>notes:${Applications.notes}</P>
+            <h3>${Applications.CompanyName}</h3>
+            <p>${Applications.roleposition}</p>
+            <P>${Applications.date}</P>
+            <p>${Applications.status}</p>
+            <p>${Applications.applicationlink}</p>
+            <p>${Applications.notes}</P>
             <hr>
         `;
 

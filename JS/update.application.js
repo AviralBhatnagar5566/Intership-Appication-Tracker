@@ -20,7 +20,8 @@ const response = async function response() {
 }
 
 applicationForm.addEventListener("submit",async function response(event) {
-        const CompanyName =document.getElementById("CompanyName")
+        event.preventDefault()
+        const CompanyName =document.getElementById("CompanyName").value
         const roleposition = document.getElementById("roleposition").value ;
         const date =document.getElementById("date").value ;
         const status =document.getElementById("status").value
@@ -42,9 +43,9 @@ applicationForm.addEventListener("submit",async function response(event) {
 
         })
         const data = await response.json()
-        document.getElementById("sucessMsg").innerText =
+        document.getElementById("successMsg").innerText =
        "Application updated successfully";
-       window.location.href = "bookings.html";
+       window.location.href = "applications.html";
     
 
 })
