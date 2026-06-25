@@ -1,5 +1,5 @@
 #application{
-     font-family:Segoe UI, Arial, sans-serif;
+    font-family:Segoe UI, Arial, sans-serif;
     margin: 0px;
     padding: 0px;
     background-color:  lightgray;
@@ -79,15 +79,16 @@
 
 
 body{
-    background-image: url("../image/HomepagBG.png");
+    /* background-image: url("../image/HomepagBG.png");
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat; */
 
+    background: linear-gradient(135deg, #0f172a 0%,#1e1b4b 50%,#311042 100%);
     font-family:Segoe UI, Arial, sans-serif;
     margin: 0px;
     padding: 0px;
-    background-color: rgb(195, 216, 221);
+    
 }
 #navbar{
     border: 2px solid black;
@@ -132,11 +133,22 @@ body{
 }
 #mainText{
    padding: 20px;
-   color: rgba(11, 11, 47, 0.957);
+   color: #cbd5e1;
+   font-size: 1rem;
+   font-weight:500;
+   
 }
-#tracker{
-    color: blue;
+
+#mainText h1{
+    font-weight: 700;
+    font-size: 3.5rem;
+    background:linear-gradient(to right,#38bdf8,#a855f7);
+     -webkit-background-clip: text;
+     background-clip: text;
+     -webkit-text-fill-color: transparent;
 }
+
+
 #buttonone{
     padding: 20px;
     margin: 0px;
@@ -229,21 +241,23 @@ body{
     align-items: center;
 }
 #workflow h2{
-   color:rgba(11, 11, 47, 0.957)
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #ffffef;
     
 }
 #steps{
     display: flex;
     flex-direction: row;
-    gap: 20px;
-    
+    gap: 20px;  
+    color: #ffffef;  
 }
 
 #step1{
     padding: 10px;
-    border: 2px solid transparent;
+    border: 1px solid rgba(255,255,255,0.08);
     border-radius: 50px;
-    background-color: white;
+    background-color: rgba(15,23,42,0.6);
     box-shadow: 3px 3px 3px black;
     transition: all 0.4s ease-in-out 0s 
 }
@@ -254,23 +268,23 @@ body{
 }
 #step2{
     padding: 10px;
-    border: 2px solid transparent;
+    border: 1px solid rgba(255,255,255,0.08);
     border-radius: 50px;
-    background-color: white;
+    background-color: rgba(15,23,42,0.6);
     box-shadow:3px 3px 3px black;
     transition: all 0.4s ease-in-out 0s 
 }
 #step2:hover{
     transform: translateY(-10px);
-    box-shadow: 10px 10px 10px rgb(28, 28, 28);;
+    box-shadow: 10px 10px 10px rgb(28, 28, 28);
     border-color: purple;
 }
 
 #step3{
     padding: 10px;
-    border: 2px solid transparent;
+    border: 1px solid rgba(255,255,255,0.08);
     border-radius: 50px;
-    background-color: white;
+    background-color: rgba(15,23,42,0.6);
     box-shadow: 3px 3px 3px black;
      transition: all 0.4s ease-in-out 0s 
 
@@ -290,9 +304,10 @@ body{
 #Applications{
    box-sizing: border-box;
     width: 100%;
-     background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #311042 100%);
+    background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #311042 100%);
     background-attachment: fixed;
     background-size: cover;
+    padding: 15px;
     min-height: 100vh;
    
 }
@@ -330,7 +345,7 @@ body{
 
 }
 .ApplicationsLists:hover{
-    transform: translateY(-10px);
+    transform: translateY(-5px);
     box-shadow: 0px 20px 40px rgba(0, 70, 255, 0.15);
     border-color: purple;
 }
@@ -352,6 +367,7 @@ body{
     color: white;
     margin-right: 10px;
     border-radius: 10px;
+    cursor: pointer;
     transition: all 0.4s ease-in-out 0s
 }
 .Deletebutton:hover{
@@ -362,7 +378,9 @@ body{
     padding: 5px;
     background-color: #3b82f6;
     border-radius: 10px;
+    cursor: pointer;
     transition: all 0.4s ease 0s
+    
 }
 .editButton:hover{
     transform: translateY(-3px);
