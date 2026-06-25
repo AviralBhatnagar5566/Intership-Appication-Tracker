@@ -89,6 +89,7 @@ body{
     margin: 0px;
     padding: 0px;
     
+    
 }
 #navbar{
     border: 2px solid black;
@@ -147,7 +148,10 @@ body{
      background-clip: text;
      -webkit-text-fill-color: transparent;
 }
-
+#mainText p{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
 
 #buttonone{
     padding: 20px;
@@ -169,6 +173,7 @@ body{
 #buttonTwo{
     padding: 20px;
     margin: 0px;
+    color: #ffffef;
     background-color: transparent;
     border: 2px solid blue;
     border-radius: 20px;
@@ -246,14 +251,14 @@ body{
     color: #ffffef;
     
 }
-#steps{
+.steps{
     display: flex;
     flex-direction: row;
     gap: 20px;  
     color: #ffffef;  
+    
 }
-
-#step1{
+.step{
     padding: 10px;
     border: 1px solid rgba(255,255,255,0.08);
     border-radius: 50px;
@@ -261,38 +266,10 @@ body{
     box-shadow: 3px 3px 3px black;
     transition: all 0.4s ease-in-out 0s 
 }
-#step1:hover{
-    transform: translateY(-10px);
-    box-shadow: 10px 10px 10px rgb(28, 28, 28);;
-    border-color: purple;
-}
-#step2{
-    padding: 10px;
-    border: 1px solid rgba(255,255,255,0.08);
-    border-radius: 50px;
-    background-color: rgba(15,23,42,0.6);
-    box-shadow:3px 3px 3px black;
-    transition: all 0.4s ease-in-out 0s 
-}
-#step2:hover{
-    transform: translateY(-10px);
-    box-shadow: 10px 10px 10px rgb(28, 28, 28);
-    border-color: purple;
-}
 
-#step3{
-    padding: 10px;
-    border: 1px solid rgba(255,255,255,0.08);
-    border-radius: 50px;
-    background-color: rgba(15,23,42,0.6);
-    box-shadow: 3px 3px 3px black;
-     transition: all 0.4s ease-in-out 0s 
-
-}
-
-#step3:hover{
+.step:hover{
     transform: translateY(-10px);
-    box-shadow: 10px 10px 10px rgb(28, 28, 28);;
+    
     border-color: purple;
 }
 .error{
