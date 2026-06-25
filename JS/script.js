@@ -2,7 +2,7 @@ const applicationForm = document.getElementById("applicationForm")
 
 const response = async function response(CompanyName,roleposition,date,status,applicationlink,notes) {
     try {
-        const response = await fetch("http://localhost:1000/api/v1/application/applicationform",{
+        const response = await fetch("https://internship-application-tracker-dind.onrender.com/api/v1/application/applicationform",{
          method: "POST",
          headers:{"Content-Type": "application/json"},
             body: JSON.stringify({

@@ -8,7 +8,7 @@
 const applicationForm = document.getElementById("applicationForm")
 
 const response = async function response() {
-    const res = await fetch(`http://localhost:1000/api/v1/application/applicationsByuid/${id}`)
+    const res = await fetch(`https://internship-application-tracker-dind.onrender.com/api/v1/application/applicationsByuid/${id}`)
     const data = await res.json()
 
         document.getElementById("CompanyName").value = data.data.CompanyName;
@@ -28,7 +28,7 @@ applicationForm.addEventListener("submit",async function response(event) {
         const applicationlink =document.getElementById("applicationlink").value;
         const notes = document.getElementById("notes").value 
 
-        const response = await fetch(`http://localhost:1000/api/v1/application/updateApplication/${id}`,{
+        const response = await fetch(`https://internship-application-tracker-dind.onrender.com/api/v1/application/updateApplication/${id}`,{
             method:"PATCH",
             headers:{"Content-Type": "application/json"},
 

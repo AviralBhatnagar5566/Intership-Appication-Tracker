@@ -2,7 +2,7 @@
 
 
 const response = async function response() {
-    const res = await fetch("http://localhost:1000/api/v1/application/applications")
+    const res = await fetch("https://internship-application-tracker-dind.onrender.com/api/v1/application/applications")
     const data = await res.json()
     console.log(data);
     

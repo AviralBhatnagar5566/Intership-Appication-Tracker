@@ -3,7 +3,7 @@ const deleteApplication = async function deleteApplication(id) {
      if(!comformMessage){return}
 
     try{
-        const response = await fetch(`http://localhost:1000/api/v1/application/deleteApplication/${id}`,{
+        const response = await fetch(`https://internship-application-tracker-dind.onrender.com/api/v1/application/deleteApplication/${id}`,{
         method:"DELETE"
         })
         const data = await response.json()
