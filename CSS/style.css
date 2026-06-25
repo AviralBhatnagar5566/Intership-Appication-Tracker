@@ -131,6 +131,11 @@ body{
     flex-direction: row;
     gap: 30px;
     padding: 20px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'%3E%3Cpath fill='%2338bdf8' fill-opacity='0.15' d='M0,160L120,144C240,128,480,96,720,112C960,128,1200,192,1320,224L1440,256L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z'%3E%3C/path%3E%3C/svg%3E");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom;
+   
 }
 #mainText{
    padding: 20px;
