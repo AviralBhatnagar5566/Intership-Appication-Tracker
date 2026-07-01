@@ -3,6 +3,22 @@ import { APIresponse } from "../utils/APIresponse.js";
 import { APIerror } from "../utils/APIerror.js";
 import { User } from "../models/user.models.js";
 
+const generateAccessTokenRefershToken = async (userId) =>{
+    try {
+        const user = User.findById(userId)
+        const accesstoken = user.generateaccesstoken()
+        const refeshtoken = user.generaterefershtoken()
+
+         user.refereshToken = refereshToken
+        await user.save({validateBeforeSave: false})
+
+        return { accesstoken, refeshtoken }
+    } catch (error) {
+        throw new APIerror(500,"unauthorized")
+    }
+}
+
+
 const registerUser = asyncHandler(async(req,res) =>{
     const {username,email,password,DOB} = req.body
 
@@ -44,6 +60,28 @@ const registerUser = asyncHandler(async(req,res) =>{
     return res.status(201).json(
         new APIresponse(201,createdUser,"User succesfully registered")
     )
+})
+
+const loginUser = asyncHandler(async(req,res) =>{
+    const { email,password } = req.body
+
+    if(!email){
+        throw new APIerror(400,"email is required in login")
+    }
+    if(!password){
+        throw new APIerror(400,"Password is required in login")
+    }
+    const Finduser = await User.findOne({
+        email
+    })
+
+    const checkpassword = await Finduser.ispasswordcorrect(password)
+
+    if(!checkpassword){
+        throw new APIerror(400,"Password is wrong")
+    }
+
+    const { accesstoken,refeshtoken } = await generateAccessTokenRefershToken(Finduser._id)
 })
 
 export { registerUser }
