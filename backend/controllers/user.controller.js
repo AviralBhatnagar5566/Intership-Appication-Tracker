@@ -82,6 +82,18 @@ const loginUser = asyncHandler(async(req,res) =>{
     }
 
     const { accesstoken,refeshtoken } = await generateAccessTokenRefershToken(Finduser._id)
+
+    const isloggedIn = await User.findById(Finduser._id).select("-password -refeshtoken")
+
+   const option = {
+        httpOnly:true,
+        secure:true
+   }
+
+   res.status(200).cookie("accesstoken",accesstoken,option).cookie("refeshtoken",refeshtoken,option).json(new APIresponse(200,{
+    user:isloggedIn,accesstoken,refeshtoken
+   },"User successfully Login"
+))
 })
 
-export { registerUser }
+export { registerUser,loginUser }
