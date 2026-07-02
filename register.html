@@ -4,8 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registration page</title>
+    <link rel="stylesheet" href="CSS/auth.css">
 </head>
-<body>
-    
+<body id="Registration">
+    <div class="Regcontainer">
+        <h1>Registration Page</h1>
+        <p>Fill in the details below to set up your new account</p>
+        <form id="RegistrationForm">
+            <label for="username" style="font-weight: bold;">UserName</label>
+            <input type="text" id="username" placeholder="Enter UserName">
+            <label for="email" style="font-weight: bold;">E-mail</label>
+            <input type="text" id="email" placeholder="Enter Email">
+            <label for="password" style="font-weight: bold;">password</label>
+            <input type="password" id="password" placeholder="Enter Password">
+            <label for="DOB" style="font-weight: bold;">Date Of Birth</label>
+            <input type="date" id="DOB">
+
+            <input type="submit" id="submit">
+            <p id="successMsg" style="color: green;"></p>
+
+        </form>
+
+
+    </div>
 </body>
 </html>
