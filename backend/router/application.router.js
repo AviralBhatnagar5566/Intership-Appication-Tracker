@@ -4,10 +4,12 @@ import { applications } from "../controllers/applications.controller.js";
 import { deleteApplication } from "../controllers/delete.controller.js";
 import { applicationsByuid } from "../controllers/applications.controller.js";
 import { updateApplication } from "../controllers/update.controller.js";
-import { registerUser } from "../controllers/user.controller.js";
+import { loginUser, registerUser } from "../controllers/user.controller.js";
 
 const router = Router()
 router.route("/registerUser").post(registerUser)
+
+router.route("/loginUser").post(loginUser)
 
 router.route("/applicationform").post(applicationform)
 
