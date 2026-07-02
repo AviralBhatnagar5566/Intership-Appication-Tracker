@@ -8,10 +8,14 @@ dotenv.config({
 })
 
 const app = express()
+const allowedOrigins = process.env.CORS.split(",");
+
 app.use(cors({
-    origin:process.env.CORS,
-    credentials:true
-}))
+  origin: allowedOrigins,
+  credentials: true
+}
+));
+
 app.use(express.json({
     limit:"16kb"
 }))
