@@ -5,11 +5,11 @@ import { User } from "../models/user.models.js";
 
 const generateAccessTokenRefershToken = async (userId) =>{
     try {
-        const user = User.findById(userId)
+        const user = await User.findById(userId)
         const accesstoken = user.generateaccesstoken()
         const refeshtoken = user.generaterefershtoken()
 
-         user.refereshToken = refereshToken
+         user.refeshtoken = refeshtoken
         await user.save({validateBeforeSave: false})
 
         return { accesstoken, refeshtoken }
